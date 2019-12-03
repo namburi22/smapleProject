@@ -1,0 +1,19 @@
+<section>
+        <h4 class="first">Search Results</h4>
+        <p-table [value]="cars">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-car>
+                <tr>
+                    <td>{{details?.name}}</td>
+                    <td>{{details?.value}}</td>
+                    <td>{{details?.date | date: 'dd/MM/yyyy'}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+</section>

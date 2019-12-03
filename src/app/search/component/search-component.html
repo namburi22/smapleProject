@@ -1,0 +1,31 @@
+<article>
+    <section>
+        <div class="container margin-top">
+            <h4>Search</h4>
+            <div class="row col-md-12" style="padding-top: 10px;">
+                <form [formGroup]="searchFrom">
+                    <div class="col-md-4">
+                        <div class="col-md-2"><span>Name</span></div>
+                        <div class="col-md-6"><input id="input" formControlName="name" class="form-control" type="text"
+                                size="30"> </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-2"><span>Type</span></div>
+                        <div class="col-md-6"><input id="input" formControlName="type" class="form-control" type="text"
+                                size="30"> </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" icon="pi pi-check" [disabled]="!searchFrom.valid" class="btn btn-primary" (click)="searchResult()">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="col-md-12 row text-center margin-top" *ngIf="showResults">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <app-search-result [name]="name" [type]="type" (details)="response(event)"></app-search-result>
+        </div>
+        <div class="col-md-2"></div>
+    </section>
+</article>
