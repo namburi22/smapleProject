@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "buildSampleProject":"ng build samplProject --prod --extract-css=true --sourceMap=flase --aot --build-optimizer=true --vendor-chunk=true --outputHashing-all"
+    "build": "ng rub buildSampleProject",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
